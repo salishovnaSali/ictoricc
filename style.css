@@ -1,0 +1,216 @@
+/* Общие стили для тела страницы */
+body {
+    font-family: 'Roboto', sans-serif; /* Современный шрифт */
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #8e44ad, #e84393); /* Градиент от фиолетового до ярко-розового */
+    color: #fff; /* Белый цвет для текста */
+    text-align: center;
+    transition: background 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Шапка сайта */
+header {
+    background: rgba(142, 68, 173, 0.85); /* Прозрачный фиолетовый фон */
+    color: #fff; /* Белый текст */
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #ff007f; /* Ярко-розовая линия снизу */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Легкая тень для текста */
+}
+
+/* Заголовок в шапке */
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: font-size 0.3s ease;
+}
+
+header h1:hover {
+    font-size: 3.3rem; /* Увеличиваем размер при наведении */
+}
+
+/* Основная область контента */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Секции контента */
+section {
+    background-color: #fff; /* Белый фон для контента */
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.05); /* Увеличиваем при наведении */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2); /* Увеличиваем тень при наведении */
+}
+
+/* Заголовки секций */
+section h2 {
+    font-size: 2rem;
+    color: #8e44ad; /* Ярко-фиолетовый для заголовков */
+    margin-bottom: 15px;
+    position: relative;
+    font-weight: 600;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+
+section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 50px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.game {
+    font-size: 1.2rem;
+color: #555;
+line-height: 1.8;
+margin-top: 15px;
+letter-spacing: 0.5px;
+text-align: justify;
+opacity: 0.9;
+transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.game p:hover {
+opacity: 1;
+color: #34495e;
+}
+/* Стили для параграфов */
+p {
+    font-size: 1.15rem;
+    color: #4b2e83; /* Тёмно-фиолетовый для текста */
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #ff007f; /* Ярко-розовый при наведении */
+}
+
+/* Стили для списка */
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1rem;
+    color: #4b2e83; /* Тёмно-фиолетовый для текста */
+    text-align: left;
+}
+
+ul li {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-left: 6px solid #e84393; /* Ярко-розовая линия слева */
+    background-color: #f9f9f9; /* Легкий фон */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #ffe6f2; /* Легкий розовый при наведении */
+    color: #8e44ad; /* Ярко-фиолетовый текст при наведении */
+    transform: scale(1.05); /* Легкое увеличение */
+}
+
+/* Стили для футера */
+footer {
+    background-color: #e84393; /* Ярко-розовый фон */
+    color: #fff; /* Белый текст */
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 4px solid #8e44ad; /* Ярко-фиолетовая линия сверху */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Анимации */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Добавляем анимацию на все секции и списки */
+section, p, ul li {
+    animation: pulse 6s ease-out infinite;
+}
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+    /* Подгонка отступов на малых экранах */
+    section {
+        padding: 20px;
+    }
+}
+
+/* Эффекты при наведении */
+section:hover {
+    transform: rotate(-2deg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Ссылки */
+a {
+    text-decoration: none;
+    color: #e84393; /* Ярко-розовый для ссылок */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8e44ad; /* Ярко-фиолетовый при наведении */
+}
